@@ -1,0 +1,114 @@
+{% extends "base.html" %}
+{% url 'from2' as form_controller %}
+
+{% block content %}
+
+<div class="p-5 col-lg-12 col-12 mx-auto border">
+    <h1 class="mb-4">I hear the buzz </h1>
+    <form method="POST" action="{% url 'from2' %}"> {% csrf_token %}
+        <div class="form-group">
+            <label for="exampleFormControlSelect1">Example select</label>
+            <select class="form-control" id="exampleFormControlSelect1" name="exampleFormControlSelect1">
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="exampleFormControlSelect2">Example multiple select</label>
+            <select multiple="" class="form-control" id="exampleFormControlSelect2" name="exampleFormControlSelect2">
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="exampleFormControlTextarea1">Example textarea</label>
+            <textarea class="form-control" id="exampleFormControlTextarea1" name="exampleFormControlTextarea1"
+                      rows="3"></textarea>
+        </div>
+        <div class="form-group">
+            <label for="exampleFormControlFile1">Example file input</label>
+            <input type="file" class="form-control-file" id="exampleFormControlFile1" name="exampleFormControlFile1">
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" id="exampleRadios1" name="exampleRadios1" value="option1"
+                   checked="">
+            <label class="form-check-label" for="exampleRadios1"> Default radio </label>
+        </div>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" id="exampleRadios2" name="exampleRadios2" value="option2">
+            <label class="form-check-label" for="exampleRadios2"> Second default radio </label>
+        </div>
+        <div class="form-check disabled">
+            <input class="form-check-input" type="radio" id="exampleRadios3" name="exampleRadios3" value="option3"
+                   disabled="">
+            <label class="form-check-label" for="exampleRadios3"> Disabled radio </label>
+        </div>
+        <div class="form-row">
+            <div class="form-check form-check-inline col-md-4">
+                <input class="form-check-input" type="checkbox" id="inlineCheckbox1" name="inlineCheckbox1"
+                       value="option1">
+                <label class="form-check-label" for="inlineCheckbox1">1</label>
+            </div>
+            <div class="form-check form-check-inline col-md-4">
+                <input class="form-check-input" type="checkbox" id="inlineCheckbox2" name="inlineCheckbox2"
+                       value="option2">
+                <label class="form-check-label" for="inlineCheckbox2">2</label>
+            </div>
+            <div class="form-check form-check-inline col-md-4">
+                <input class="form-check-input" type="checkbox" id="inlineCheckbox3" name="inlineCheckbox3"
+                       value="option3">
+                <label class="form-check-label" for="inlineCheckbox3">3 (disabled)</label>
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label for="inputEmail4">Email</label>
+                <input type="email" class="form-control" id="inputEmail4" name="inputEmail4" placeholder="Email">
+            </div>
+            <div class="form-group col-md-6">
+                <label for="inputPassword4">Password</label>
+                <input type="password" class="form-control" id="inputPassword4" name="inputPassword4" placeholder="Password">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="inputAddress">Address</label>
+            <input type="text" class="form-control" id="inputAddress" name="inputAddress" placeholder="1234 Main St">
+        </div>
+        <div class="form-group">
+            <label for="inputAddress2">Address 2</label>
+            <input type="text" class="form-control" id="inputAddress2" name="inputAddress2" placeholder="Apartment, studio, or floor">
+        </div>
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label for="inputCity">City</label>
+                <input type="text" class="form-control" id="inputCity" name="inputCity" >
+            </div>
+            <div class="form-group col-md-4">
+                <label for="inputState">State</label>
+                <select id="inputState" class="form-control" name="inputState" >
+                    <option selected="">Choose...</option>
+                    <option>...</option>
+                </select>
+            </div>
+            <div class="form-group col-md-2">
+                <label for="inputZip">Zip</label>
+                <input type="text" class="form-control" id="inputZip" name="inputZip" >
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="gridCheck" name="gridCheck" >
+                <label class="form-check-label" for="gridCheck"> Check me out </label>
+            </div>
+        </div>
+        <button type="submit" class="btn btn-primary">Sign in</button>
+    </form>
+</div>
+
+{% endblock %}

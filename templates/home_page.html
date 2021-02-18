@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+{% load static %}
+
+<title>Hoyperz !!!!!</title>
+
+{% block base_head %}
+<link rel='stylesheet' href='{% static "css/main.css" %}' >
+{% endblock %}
+
+{% block content %}
+
+<div class="py-5 text-center align-items-center d-flex" style="background-image: linear-gradient(to left bottom, rgba(189, 195, 199, .75), rgba(44, 62, 80, .75)); background-size: 100%;">
+    <div class="container py-5">
+      <div class="row">
+        <div class="col-md-8 mx-auto"> <i class="d-block fa fa-stop-circle mb-3 text-muted fa-5x"></i>
+          <h1 class="display-3 mb-4">Welcome to this site</h1>
+          <p class="lead mb-5">Heaven and earth seem to dwell in my soul and absorb its power, like the form of a beloved mistress, then I often think with longing, Oh, would I could describe these conceptions, could impress upon paper all that is living.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+{% if request.user.is_authenticated %}
+  <div class="py-5">
+    <div class="container">
+      <div class="row">
+        <div class="px-5 col-md-8 text-center mx-auto" style="">
+          <h3 class="text-primary display-4"> <b>Hi! You are here!</b></h3>
+          <h2 class="my-3">I am so happy, my dear friend.</h2>
+          <p class="mb-3">Code: 77499512009 :)</p> <a href="#" class="btn btn-primary">Useless Button</a>
+          <p class="mt-2"> <small>Currently broken</small></p>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endif %}
+  <div class="py-3">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 text-center">
+          <p class="mb-0">IS IT WORKING THO ?</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+{% endblock %}
